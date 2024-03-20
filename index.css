@@ -1,0 +1,95 @@
+/*
+body {
+  background: lightblue;
+  text-align: center;
+}
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+img {
+}
+
+the translate property will shift the element to the right or left 
+depending on the axis 
+//we can also access both the X and Y axis by putting both of them in parameters
+// the x axis first and the y axis second
+
+ */
+
+/*
+  img:hover {transform: translate(200px, 200px);
+  the scale value shrinks or enclarges according to the parameters given to it
+  if a value below one is givrn to it.. it will shrinks else a value above one is given to it 
+  it  enlarges
+  transform: scale(0.5, 3);
+  transition: ease;
+  transform: rotateZ(200deg);
+  the rotate property as the name implies is used to rotate properties along
+  the axid specified in the parameter.. whether positive or negative
+  //THE TRANSITION PROPERY
+  as the name implies.. the transition property is used to mainly trabsform 
+  elements
+ transition-duration: 9s;
+  transition-delay: 1s;
+}
+  */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+.mario {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  transform: scale(0.8);
+  animation-name: drive;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes drive {
+  from {
+    transform: translate(0px);
+  }
+  to {
+    transform: translate(200px);
+  }
+}
